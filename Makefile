@@ -1,4 +1,4 @@
-DOCKER_REPO?=packpack/packpack
+DOCKER_REPO?=asbru/asbru-cm
 
 ##
 
