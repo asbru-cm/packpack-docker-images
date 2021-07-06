@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN echo 'apt::install-recommends "false";' > /etc/apt/apt.conf.d/00recommends
 
 # Enable extra repositories
-RUN apt-get update && apt-get install -y --force-yes \
+RUN apt-get update && apt-get install -y --allow-true \
     apt-transport-https \
     curl \
     wget \
@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y --force-yes \
     gpgv
 
 # Install base toolset
-RUN apt-get update && apt-get install -y --force-yes \
+RUN apt-get update && apt-get install -y --allow-true \
     sudo \
     git \
     build-essential \
@@ -35,8 +35,7 @@ RUN apt-get update && apt-get install -y --force-yes \
     lintian \
     equivs \
     rpm \
-    alien \
-    dh-systemd
+    alienhi
 
 # Enable sudo without password
 RUN echo '%adm ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
