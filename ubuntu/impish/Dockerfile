@@ -35,7 +35,7 @@ RUN apt-get update && apt-get install -y --allow-true \
     lintian \
     equivs \
     rpm \
-    alienhi
+    alien
 
 # Enable sudo without password
 RUN echo '%adm ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
